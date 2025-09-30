@@ -25,7 +25,7 @@
 }
 
 .card-shadow:hover {
-  transform: translateY(-2px); /* Subtle lift */
+  transform: translateY(-1px); /* Subtle lift */
   box-shadow: var(--shadow-xl, 0 6px 20px rgba(0,0,0,0.2));
 }
 
@@ -45,6 +45,7 @@
 .card .card-button {
   margin-top: 16px;
   text-align: right;
+  float: right;
 }
 
 .card .card-input {
