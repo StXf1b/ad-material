@@ -9,7 +9,7 @@ import "./Button.css"; // Button-specific styles
 /*
  Props:
     * children: The content inside the button (text, icons, etc.)
-    * variant: "primary" | "secondary" | "danger" → Button style variant (default: "primary")
+    * variant: "primary" | "secondary" | "danger" | "cancel" → (default: "primary")
     * onClick: function → Click handler
     * disabled: boolean → Disables the button if true
     * className: string → Extra CSS classes for customization
@@ -19,27 +19,31 @@ export function Button({
     variant = "primary",
     onClick,
     disabled = false,
-    className = ""
+    className = "",
+    style = {}
 }) {
     // * Map of available style variants
     const variants = {
         primary: "primary",
         secondary: "secondary",
-        danger: "danger"
+        danger: "danger",
+        cancel: "cancel"
     };
 
     return (
         <button
             // * Final class list explanation:
             // * "button" → base shared styles
-            // * variant (primary/secondary/danger) → variant-specific styles
+            // * variant (primary/secondary/danger/cancel) → variant-specific styles
             // * "disabled" → applied only if `disabled` is true
             // * className → custom classes passed by user
+            // * style → additional inline styles
             className={`button ${variants[variant]} ${disabled ? "disabled" : ""} ${className}`}
             onClick={onClick} // * Calls function passed to button
             disabled={disabled} // * Native HTML disabled state for accessibility
+            style={{ ...style }} // * Additional inline styles if needed
         >
-            {children} {/* Button content (text, icons, etc.) */}
+            {children} {/* Button content */}
         </button>
   );
 }

@@ -23,6 +23,7 @@ function App() {
         <p>Please enter <span style={{ color: "#ff0000" }}>"password"</span> to delete!</p>
         <Input placeholder="Enter your password" className="card-input" value={password} onChange={(e) => setPassword(e.target.value)} />
         <Button variant="danger" className="card-button" onClick={handleDelete}>Delete</Button>
+        <Button style={{ marginRight: "0.5rem" }} variant="cancel" className="card-button" onClick={() => setPassword("")}>Cancel</Button>
         <div className="card-footer">Last Password update: Today</div>
       </Card>
     </div>
