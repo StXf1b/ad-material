@@ -1,0 +1,54 @@
+/* 🔹 Base card styles shared across all variants */
+.card {
+  border-radius: var(--border-radius-lg); /* Rounded corners */
+  padding: 16px; /* Inner spacing */
+  background-color: var(--card-bg); /* Default background */
+  color: var(--color-text-light); /* Default text */
+  transition: transform var(--transition-medium) ease,
+              box-shadow var(--transition-medium) ease;
+}
+
+/* 🔹 Default card (subtle shadow, elevated look) */
+.card-default {
+  box-shadow: var(--shadow-md, 0 2px 6px rgba(0,0,0,0.1));
+}
+
+/* 🔹 Outlined card (bordered, no shadow) */
+.card-outlined {
+  border: 2px solid var(--color-border, #e5e7eb);
+  background-color: transparent;
+}
+
+/* 🔹 Shadow card (stronger emphasis, hover effect) */
+.card-shadow {
+  box-shadow: var(--shadow-lg, 0 4px 12px rgba(0,0,0,0.15));
+}
+
+.card-shadow:hover {
+  transform: translateY(-2px); /* Subtle lift */
+  box-shadow: var(--shadow-xl, 0 6px 20px rgba(0,0,0,0.2));
+}
+
+/* 🔹 Optional: Header/Footer slots */
+.card-header {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  margin-bottom: 12px;
+}
+
+.card-footer {
+  margin-top: 12px;
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted, #6b7280);
+}
+
+.card .card-button {
+  margin-top: 16px;
+  text-align: right;
+}
+
+.card .card-input {
+  background-color: var(--card-bg);
+  border: 1px solid var(--color-primary-light);
+  margin-top: 9px;
+}
