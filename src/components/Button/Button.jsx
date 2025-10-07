@@ -13,6 +13,7 @@ import "./Button.css"; // Button-specific styles
     * onClick: function → Click handler
     * disabled: boolean → Disables the button if true
     * className: string → Extra CSS classes for customization
+    * style: React.CSSProperties → Inline styles for the button
 */
 export function Button({
     children,
@@ -32,12 +33,6 @@ export function Button({
 
     return (
         <button
-            // * Final class list explanation:
-            // * "button" → base shared styles
-            // * variant (primary/secondary/danger/cancel) → variant-specific styles
-            // * "disabled" → applied only if `disabled` is true
-            // * className → custom classes passed by user
-            // * style → additional inline styles
             className={`button ${variants[variant]} ${disabled ? "disabled" : ""} ${className}`}
             onClick={onClick} // * Calls function passed to button
             disabled={disabled} // * Native HTML disabled state for accessibility
