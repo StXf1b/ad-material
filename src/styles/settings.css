@@ -1,5 +1,5 @@
 :root {
-  /* Brand / Primary */
+  /* Primary */
   --color-primary: #6366F1;
   --color-primary-hover: #4F46E5;
   --color-primary-light: #A5B4FC;
@@ -43,7 +43,6 @@
   --transition-medium: 300ms;
   --transition-slow: 500ms;
 
-  
   /* Extras */
   --card-bg: #cad4f5;
 }
