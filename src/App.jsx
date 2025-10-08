@@ -5,6 +5,8 @@ import { useState } from 'react';
 import {Button} from "./components/Button/Button"
 import { RiErrorWarningFill } from "react-icons/ri";
 import { MdInfo } from "react-icons/md";
+import { Loader, LoaderBouncing } from "./components/Loader/Loader";
+import { Tooltip } from "./components/Tooltip/Tooltip"
 
 
 function App() {
@@ -27,6 +29,9 @@ function App() {
         <p>Are you sure you want to proceed?</p>
         <p>This action cannot be undone.</p>
       </Modal>
+      <Tooltip text="This is a tooltip!" position="top">
+        <Button>Hover me (top)</Button>
+      </Tooltip>
     </div>
   )
 }

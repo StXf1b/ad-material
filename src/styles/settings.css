@@ -5,7 +5,7 @@
   --color-primary-light: #A5B4FC;
 
   /* Secondary Accent */
-  --color-secondary: #06B6D4;
+  --color-secondary: #007bff; /* * Old color: #06B6D4 */
 
   /* State Colors */
   --color-danger: #EF4444;
@@ -23,7 +23,7 @@
 
   /* Font Sizes */
   --font-size-sm: 4px;
-  --font-size-md: 10px;
+  --font-size-md: 12px;
   --font-size-lg: 16px;
   --font-size-xl: 24px;
 
